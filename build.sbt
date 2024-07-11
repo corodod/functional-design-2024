@@ -1,7 +1,7 @@
 import sbt._
 
-val ZIOVersion = "2.0.9"
-val ScalaVersionConstant = "3.3.0-RC6"
+val ZIOVersion = "2.1.6"
+val ScalaVersionConstant = "3.3.3"
 
 lazy val functionalDesign = (project in file(".")).
   settings (
@@ -38,7 +38,5 @@ libraryDependencies ++= Seq(
   "dev.zio" %% "zio-test-sbt" % ZIOVersion  % Test
 )
 
-resolvers ++= Seq(
-  "Secured Central Repository" at "https://repo1.maven.org/maven2",
-  Resolver.sonatypeRepo("snapshots")
-)
+resolvers ++= Seq("Secured Central Repository" at "https://repo1.maven.org/maven2")
+resolvers ++= Resolver.sonatypeOssRepos("snapshots")
