@@ -38,7 +38,6 @@ object credit_card:
   final case class PhysicalProduct(name: String) extends Product
   final case class DigitalProduct(name: String) extends Product
   final case class EventAccess(eventName: String, date: Instant) extends Product
-  //type Product
 
   /** EXERCISE 3
    *
@@ -146,7 +145,6 @@ object documents:
                              content: DocContent,
                              author: UserId,
                              createdDate: Instant)
-  //type Document
 
   /** EXERCISE 2
    *
@@ -158,7 +156,6 @@ object documents:
   final case object NoAccess extends AccessType
   final case object OnlyRead extends AccessType
   final case object ReadWrite extends AccessType
-  //type AccessType
 
   /** EXERCISE 3
    *
@@ -185,8 +182,6 @@ object bank:
                              id: Int,
                              name: String
                            )
-  //type Customer
-
   /** EXERCISE 2
    *
    * Using only enums and case classes, develop a model of an account type. For example, one
@@ -196,7 +191,6 @@ object bank:
   sealed trait AccountType
   final case class CheckingAccount(currency: String) extends AccountType
   final case class SavingsAccount(currency: String, interestRate: Double) extends AccountType
-  //type AccountType
 
   /** EXERCISE 3
    *
@@ -211,7 +205,6 @@ object bank:
                             owner: Customer,
                             authorizedUsers: List[Customer]
                           )
-  //type Account
 end bank
 
 /** STOCK PORTFOLIO - GRADUATION PROJECT
@@ -228,7 +221,6 @@ object portfolio:
   sealed trait Exchange
   final case object NASDAQ extends Exchange
   final case object NYSE extends Exchange
-  //type Exchange
 
   /** EXERCISE 2
    *
@@ -260,7 +252,6 @@ object portfolio:
                               owner: User,
                               investments: Map[StockSymbol, Double]
                             )
-  //type Portfolio
 
   /** EXERCISE 5
    *
